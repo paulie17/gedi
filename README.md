@@ -1,3 +1,15 @@
+Build docker image
+
+    cd docker
+    docker compose build gedi
+
+Start the docker service
+
+    docker compose run gedi
+
+
+Original README
+---
 # GeDi: Learning general and distinctive 3D local deep descriptors for point cloud registration - IEEE T-PAMI
 
 Official repository of GeDi descriptor. [Paper (pdf)](https://arxiv.org/pdf/2105.10382.pdf)
