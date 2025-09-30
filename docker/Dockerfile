@@ -1,4 +1,4 @@
-FROM nvidia/cudagl:11.3.0-devel-ubuntu20.04
+FROM nvidia/cudagl:11.3.0-devel-ubuntu20.04 AS gedi
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -20,3 +20,6 @@ RUN pip install ./pointnet2_ops_lib/
 WORKDIR /gedi
 CMD ["/bin/bash"]
 
+FROM gedi AS gedi_server
+
+CMD ["python3", "descriptors_server.py"]
